@@ -78,5 +78,14 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  const aboutData = {
+    message: 'Greetings! I am Hasibur Rahman, a junior student enrolled at NYU Abu Dhabi. My academic pursuits include a double major in Computer Science and Interactive Media. Currently, I am studying away at New York City. I am deeply passionate about learning and all things tech-related, with a keen interest in the fascinating overlap between technology and creative expression. ',
+    imageUrl: 'https://drive.google.com/uc?export=view&id=1yGhhBsofRpUW6-4-74cnT-I0v1p5NTdh',
+  };
+
+  res.json(aboutData);
+}); 
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
